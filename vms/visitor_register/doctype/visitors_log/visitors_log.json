@@ -1,0 +1,198 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-26 12:03:18.198154",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "visitor_register_section",
+  "visitor",
+  "visitors_name",
+  "phone",
+  "column_break_bpvy",
+  "id_type",
+  "id_number",
+  "address",
+  "visit_details_section",
+  "visit_code",
+  "checkin_type",
+  "checkin_time",
+  "checkout_time",
+  "column_break_tzkl",
+  "purpose_of_visit",
+  "number_of_visitors",
+  "who_are_you_meeting_with",
+  "visitors_image",
+  "employees_email",
+  "branch"
+ ],
+ "fields": [
+  {
+   "fieldname": "visitor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Visitor",
+   "options": "Visitor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_code",
+   "fieldtype": "Data",
+   "label": "Visit Code",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "visitor_register_section",
+   "fieldtype": "Section Break",
+   "label": "Visitor's Details"
+  },
+  {
+   "fetch_from": "visitor.visitors_name",
+   "fieldname": "visitors_name",
+   "fieldtype": "Data",
+   "label": "Visitor's Name"
+  },
+  {
+   "fetch_from": "visitor.phone",
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "column_break_bpvy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "visitor.address",
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "id_type",
+   "fieldtype": "Select",
+   "label": "ID Type",
+   "options": "\nNational ID\nDriver's License\nVoter's Card\nInternational Passport"
+  },
+  {
+   "depends_on": "id_type",
+   "fieldname": "id_number",
+   "fieldtype": "Data",
+   "label": "ID Number",
+   "mandatory_depends_on": "id_type"
+  },
+  {
+   "fieldname": "visit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Visit Details"
+  },
+  {
+   "fieldname": "checkin_type",
+   "fieldtype": "Select",
+   "label": "Checkin Type",
+   "options": "\nIndividual\nGroup",
+   "reqd": 1
+  },
+  {
+   "fieldname": "checkin_time",
+   "fieldtype": "Datetime",
+   "label": "Checkin Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "checkout_time",
+   "fieldtype": "Datetime",
+   "label": "Checkout Time"
+  },
+  {
+   "fieldname": "column_break_tzkl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "who_are_you_meeting_with",
+   "fieldtype": "Link",
+   "label": "Who are you meeting with?",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employees_email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Employee's Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "purpose_of_visit",
+   "fieldtype": "Link",
+   "label": "Purpose of Visit",
+   "options": "Purpose of Visit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visitors_image",
+   "fieldtype": "Attach",
+   "label": "Visitor's Image"
+  },
+  {
+   "fieldname": "number_of_visitors",
+   "fieldtype": "Int",
+   "label": "Number of Visitors",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-26 14:06:15.497728",
+ "modified_by": "Administrator",
+ "module": "Visitor Register",
+ "name": "Visitors Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Visitor Register Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

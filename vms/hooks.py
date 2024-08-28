@@ -6,6 +6,15 @@ app_email = "admin@sydani.org"
 app_license = "mit"
 # required_apps = []
 
+#Fixtures
+fixtures = [
+    {"dt": "DocType", "filters": [["name", "in", ["Visitor Register", "Visitor Register Settings", "Visitor", "Purpose of Visit"]]]},
+    {"dt": "Role", "filters": [["name", "in", ["Visitor Register Admin"]]]},
+    {"dt": "Purpose of Visit"},
+    {"dt": "State"},
+]
+
+
 # Includes in <head>
 # ------------------
 

@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-26 13:16:04.276383",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "scheduled_visit_detail_section",
+  "visitor",
+  "who_is_the_visitor_meeting_with",
+  "checkin_time",
+  "column_break_zhai",
+  "purpose_of_visit",
+  "visit_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "visitor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Visitor",
+   "options": "Visitor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "who_is_the_visitor_meeting_with",
+   "fieldtype": "Link",
+   "label": "Who is the visitor meeting with?",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "checkin_time",
+   "fieldtype": "Datetime",
+   "label": "Checkin Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zhai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purpose_of_visit",
+   "fieldtype": "Link",
+   "label": "Purpose of Visit",
+   "options": "Purpose of Visit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_code",
+   "fieldtype": "Data",
+   "label": "Visit Code"
+  },
+  {
+   "fieldname": "scheduled_visit_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Scheduled Visit Detail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-26 14:05:21.652027",
+ "modified_by": "Administrator",
+ "module": "Visitor Register",
+ "name": "Scheduled Visit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Visitor Register Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

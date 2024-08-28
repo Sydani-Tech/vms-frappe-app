@@ -1,1 +1,1 @@
-Visitors Management System
+Visitor Register

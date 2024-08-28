@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-26 09:26:44.511655",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "capture_visitors_picure",
+  "make_the_branch_field_mandatory",
+  "visitors_identifier",
+  "notify_admin",
+  "time_to_notify",
+  "enable_qr_codes"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "capture_visitors_picure",
+   "fieldtype": "Check",
+   "label": "Capture Visitor's Picure?"
+  },
+  {
+   "default": "Phone Number",
+   "fieldname": "visitors_identifier",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Visitors' Identifier",
+   "options": "Phone Number\nID Card",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "notify_admin",
+   "fieldtype": "Check",
+   "label": "Notify Admin about visitors that are yet to check out?"
+  },
+  {
+   "depends_on": "notify_admin",
+   "fieldname": "time_to_notify",
+   "fieldtype": "Float",
+   "label": "Time (in hours) to notify after check in",
+   "mandatory_depends_on": "notify_admin"
+  },
+  {
+   "default": "0",
+   "fieldname": "make_the_branch_field_mandatory",
+   "fieldtype": "Check",
+   "label": "Make the branch field mandatory?"
+  },
+  {
+   "default": "0",
+   "description": "Please note that a printer and a device with camera is required to use this feature",
+   "fieldname": "enable_qr_codes",
+   "fieldtype": "Check",
+   "label": "Enable QR codes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-08-26 14:37:36.096214",
+ "modified_by": "Administrator",
+ "module": "Visitor Register",
+ "name": "Visitor Register Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Visitor Register Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
